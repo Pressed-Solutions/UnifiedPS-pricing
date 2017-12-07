@@ -1,0 +1,199 @@
+{
+    "key": "group_5a29a2bee9a46",
+    "title": "Pricing",
+    "fields": [
+        {
+            "key": "field_5a29a2e9b712e",
+            "label": "Product",
+            "name": "product",
+            "type": "repeater",
+            "instructions": "Each product will show up in a separate stripe on the page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Product",
+            "sub_fields": [
+                {
+                    "key": "field_5a29a2fcb712f",
+                    "label": "Product Name",
+                    "name": "product_name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a29a30ab7130",
+                    "label": "Slider Label",
+                    "name": "slider_label",
+                    "type": "text",
+                    "instructions": "Introductory text above the slider. Include %%variable%% where you would like the variable number to go.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "I will send up to %%variable%% push notifications per month",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a29a3bdb7131",
+                    "label": "Price Points",
+                    "name": "price_structure",
+                    "type": "repeater",
+                    "instructions": "Enter as many rows as necessary. Format each as you would like it to show up on the front end (e.g. with commas, decimal points, dashes, etc.).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "Add Price Point",
+                    "sub_fields": [
+                        {
+                            "key": "field_5a29a3cab7132",
+                            "label": "Quantity",
+                            "name": "quantity",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "20,000",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5a29a429b7134",
+                            "label": "Price",
+                            "name": "price",
+                            "type": "text",
+                            "instructions": "Do <strong>not<\/strong> include a dollar sign.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "34",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "$2,000",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5a29a415b7133",
+                            "label": "Unit",
+                            "name": "unit",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "month",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5a29a566496d4",
+                    "label": "Offer Details",
+                    "name": "offer_details",
+                    "type": "wysiwyg",
+                    "instructions": "This information (description, offer details, etc.) will be shown below the slider. It would consist of information about what this plan includes, etc.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5a29ad700a376",
+                    "label": "CTA Details",
+                    "name": "cta_details",
+                    "type": "wysiwyg",
+                    "instructions": "This information will be shown to the right of the slider (or below on mobile). It should include a link to sign up and other details about the offer.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-pricing.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1512684334
+}

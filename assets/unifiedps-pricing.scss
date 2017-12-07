@@ -1,0 +1,151 @@
+// Base Colors
+$shade-10: #2c3e50;
+$shade-1: #d7dcdf;
+$shade-0: #fff;
+$accent-1: #f9751b;
+$accent-2: #0481a7;
+
+// Range Slider
+$range-width: 100%;
+
+$range-handle-color: $shade-10;
+$range-handle-color-hover: $accent-1;
+$range-handle-size: 40px;
+
+$range-track-color: $shade-1;
+$range-track-height: 20px;
+
+$range-label-color: $shade-10;
+
+$border-color: $shade-1;
+$border-radius: 3px;
+
+.pricing-stripe {
+    display: flex;
+    padding: 25px 0;
+
+    &:not(:first-child) {
+        border-top: 2px solid $border-color;
+    }
+
+    label {
+        text-align: center;
+
+        p {
+            margin-top: 15px;
+            font-size: 1.5em;
+        }
+    }
+
+    .cta {
+        margin-bottom: 2em;
+        width: 100%;
+        background-color: white;
+        border-radius: $border-radius;
+        box-shadow: 0 5px 15px 0 rgba(0,0,0,.07), 0 15px 35px 0 rgba(0,0,0,.1);
+        overflow: hidden;
+        text-align: center;
+
+        > * { padding: 1em; }
+
+        .price {
+            background-color: $accent-2;
+            color: white;
+            font-size: 3em;
+
+            sup, .small { font-size: 1rem; }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+
+        .info { order: 2; }
+        .cta { order: 1; }
+    }
+
+    @media screen and (min-width: 768px) {
+        .info {
+            width: 70%;
+            margin: 2em 0;
+            padding: 1em calc(3% + 1em) 1em 1em;
+            border: 1px solid $border-color;
+            border-top-left-radius: $border-radius;
+            border-bottom-left-radius: $border-radius;
+        }
+
+        .cta {
+            width: 33%;
+            margin-left: -3%;
+        }
+    }
+}
+
+.range-slider {
+    width: $range-width;
+
+    &.range {
+        -webkit-appearance: none;
+        height: $range-track-height;
+        border-radius: 10px;
+        background: $range-track-color;
+        outline: none;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 75%;
+
+        // Range Handle
+        &::-webkit-slider-thumb {
+            appearance: none;
+            width: $range-handle-size;
+            height: $range-handle-size;
+            border-radius: 50%;
+            background: $range-handle-color;
+            cursor: pointer;
+            transition: background .15s ease-in-out;
+
+            &:hover {
+                background: $range-handle-color-hover;
+            }
+        }
+
+        &:active::-webkit-slider-thumb {
+            background: $range-handle-color-hover;
+        }
+
+        &::-moz-range-thumb {
+            width: $range-handle-size;
+            height: $range-handle-size;
+            border: 0;
+            border-radius: 50%;
+            background: $range-handle-color;
+            cursor: pointer;
+            transition: background .15s ease-in-out;
+
+            &:hover {
+                background: $range-handle-color-hover;
+            }
+        }
+
+        &:active::-moz-range-thumb {
+            background: $range-handle-color-hover;
+        }
+    }
+}
+
+.variable-amount {
+    font-weight: 700;
+    color: $accent-1;
+}
+
+
+// Firefox Overrides
+::-moz-range-track {
+    background: $range-track-color;
+    border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+    border: 0;
+}
