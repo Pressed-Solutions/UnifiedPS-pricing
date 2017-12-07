@@ -21,8 +21,13 @@ $border-color: $shade-1;
 $border-radius: 3px;
 
 .pricing-stripe {
-    display: flex;
     padding: 25px 0;
+
+    &:after {
+        display: table;
+        content: '';
+        clear: both;
+    }
 
     &:not(:first-child) {
         border-top: 2px solid $border-color;
@@ -57,24 +62,18 @@ $border-radius: 3px;
         }
     }
 
-    @media screen and (max-width: 767px) {
-        flex-wrap: wrap;
-
-        .info { order: 2; }
-        .cta { order: 1; }
-    }
-
     @media screen and (min-width: 768px) {
         .info {
+            float: left;
             width: 70%;
             margin: 2em 0;
             padding: 1em calc(3% + 1em) 1em 1em;
             border: 1px solid $border-color;
-            border-top-left-radius: $border-radius;
-            border-bottom-left-radius: $border-radius;
+            border-radius: $border-radius;
         }
 
         .cta {
+            float: right;
             width: 33%;
             margin-left: -3%;
         }
