@@ -23,3 +23,8 @@
 */
 
 defined( 'ABSPATH' ) or die( 'No access allowed' );
+
+/*
+ * Include ACF settings
+ */
+include( 'inc/acf.php' );
