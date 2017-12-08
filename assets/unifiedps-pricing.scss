@@ -21,7 +21,7 @@ $border-color: $shade-1;
 $border-radius: 3px;
 
 .pricing-stripe {
-    padding: 25px 0;
+    padding: 3em 0 5em;
 
     @supports (display: grid) {
         display: grid;
@@ -63,6 +63,21 @@ $border-radius: 3px;
         }
     }
 
+    .button {
+        display: block;
+        padding: 1em 2em .8em;
+        border-radius: 5px;
+        background-color: $accent-2;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all .3s ease;
+
+        &:hover, &:focus, &:active {
+            background-color: $accent-2;
+        }
+    }
     .cta {
         margin-bottom: 2em;
         width: 100%;
@@ -87,8 +102,8 @@ $border-radius: 3px;
         .info {
             float: left;
             width: 70%;
-            margin: 2em 0;
-            padding: 1em calc(3% + 1em) 1em 1em;
+            margin: 4em 0;
+            padding: 2em calc(3% + 2em) 2em 2em;
             border: 1px solid $border-color;
             border-radius: $border-radius;
         }
@@ -97,6 +112,7 @@ $border-radius: 3px;
             float: right;
             width: 33%;
             margin-left: -3%;
+            margin-bottom: 0;
         }
 
         @supports (display: grid) {
