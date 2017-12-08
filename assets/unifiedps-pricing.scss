@@ -25,7 +25,7 @@ $border-radius: 3px;
 
     @supports (display: grid) {
         display: grid;
-        grid-template-columns: 67% 33%;
+        grid-template-columns: 60% 40%;
         grid-template-areas:
             "header header"
             "range cta"
@@ -77,12 +77,12 @@ $border-radius: 3px;
 
             .price-range {
                 border-top: 1px solid $border-color;
-                padding: 2em calc(3% + 2em) 1em 2em;
+                padding: 2em 4em 1em 2em;
             }
 
             .offer-details {
                 border-bottom: 1px solid $border-color;
-                padding: 1em calc(3% + 2em) 2em 2em;
+                padding: 1em 4em 2em 2em;
             }
         }
     }
@@ -156,7 +156,7 @@ $border-radius: 3px;
         .cta {
             float: right;
             width: 33%;
-            margin-left: -3%;
+            margin-left: 1em;
             margin-bottom: 0;
         }
 
