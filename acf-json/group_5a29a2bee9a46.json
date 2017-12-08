@@ -111,7 +111,7 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "placeholder": "$2,000",
+                            "placeholder": "2,000",
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
@@ -195,5 +195,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1512684334
+    "modified": 1512698254
 }
