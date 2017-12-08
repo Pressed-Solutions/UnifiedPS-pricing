@@ -28,19 +28,42 @@ $border-radius: 3px;
         grid-template-columns: 67% 33%;
         grid-template-areas:
             "header header"
+            "range cta"
             "info cta";
 
         @media screen and (max-width: 767px) {
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
+            grid-template-areas:
+                "header"
+                "range"
+                "cta"
+                "info";
 
-            .price-title { grid-row: 1; }
-            .info { grid-row: 3; }
-            .cta { grid-row: 2; }
+            .price-range { margin-bottom: 1em; }
         }
 
+        .price-title { grid-area: header; }
+        .price-range { grid-area: range; }
+        .offer-details { grid-area: info };
+        .cta { grid-area: cta; }
+
         @media screen and (min-width: 768px) {
-            .price-title { grid-area: header; }
+            .price-range,
+            .offer-details {
+                border-left: 1px solid $border-color;
+            }
+
+            .price-range {
+                border-top: 1px solid $border-color;
+                border-top-left-radius: $border-radius;
+                padding: 2em calc(3% + 2em) 1em 2em;
+            }
+
+            .offer-details {
+                border-bottom: 1px solid $border-color;
+                border-bottom-left-radius: $border-radius;
+                padding: 1em calc(3% + 2em) 2em 2em;
+            }
         }
     }
 
@@ -78,6 +101,7 @@ $border-radius: 3px;
             background-color: $accent-2;
         }
     }
+
     .cta {
         margin-bottom: 2em;
         width: 100%;
@@ -98,15 +122,17 @@ $border-radius: 3px;
         }
     }
 
+    .small, small { font-size: 75%; }
+
     @media screen and (min-width: 768px) {
-        .info {
+        .price-range,
+        .offer-details {
             float: left;
             width: 70%;
-            margin: 4em 0;
-            padding: 2em calc(3% + 2em) 2em 2em;
-            border: 1px solid $border-color;
-            border-radius: $border-radius;
         }
+
+        .price-range { margin-top: 4em; }
+        .offer-details { margin-bottom: 4em; }
 
         .cta {
             float: right;
@@ -116,7 +142,7 @@ $border-radius: 3px;
         }
 
         @supports (display: grid) {
-            .info, .cta {
+            .price-range, .offer-details, .cta {
                 float: none;
                 width: 100%;
             }

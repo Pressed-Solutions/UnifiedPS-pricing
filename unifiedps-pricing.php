@@ -65,14 +65,12 @@ function unifiedps_pricing_shortcode() {
 
         <div class="pricing-stripe <?php echo $product_class; ?>">
             <h2 class="price-title"><?php echo $product_name ?></h2>
-            <div class="info">
-                <div class="range-slider">
-                  <label for="<?php echo $product_class; ?>"><p><?php echo $slider_label; ?></p>
-                      <p><input name="<?php echo $product_class; ?>" class="range-slider range" type="range" min="1" max="<?php echo $price_point_count ?>" step="1" data-quantity-list="<?php echo urlencode( $price_point_list ); ?>"></p>
-                  </label>
-                </div>
-                <div class="offer-details"><?php echo $offer_details; ?></div>
+            <div class="price-range">
+              <label for="<?php echo $product_class; ?>"><p><?php echo $slider_label; ?></p>
+                  <p><input name="<?php echo $product_class; ?>" class="range-slider range" type="range" min="1" max="<?php echo $price_point_count ?>" step="1" data-quantity-list="<?php echo urlencode( $price_point_list ); ?>"></p>
+              </label>
             </div>
+            <div class="offer-details"><?php echo $offer_details; ?></div>
             <div class="cta">
                   <p class="price <?php echo $product_class; ?>"><sup>$</sup><span class="monthly-amount variable-amount"></span><wbr><span class="small">/<span class="unit">month</span></span>
                   </p>

@@ -3,8 +3,8 @@
      * Initialize all sliders
      */
     function rangeSlider() {
-        var slider = $('.range-slider'),
-            range = $('.range-slider.range');
+        var slider = $('.price-range'),
+            range = $('input.range-slider');
 
         slider.each(function () {
             range.each(function () {
