@@ -64,8 +64,8 @@ function unifiedps_pricing_shortcode() {
         ?>
 
         <div class="pricing-stripe <?php echo $product_class; ?>">
+            <h2 class="price-title"><?php echo $product_name ?></h2>
             <div class="info">
-                <h2><?php echo $product_name ?></h2>
                 <div class="range-slider">
                   <label for="<?php echo $product_class; ?>"><p><?php echo $slider_label; ?></p>
                       <p><input name="<?php echo $product_class; ?>" class="range-slider range" type="range" min="1" max="<?php echo $price_point_count ?>" step="1" data-quantity-list="<?php echo urlencode( $price_point_list ); ?>"></p>

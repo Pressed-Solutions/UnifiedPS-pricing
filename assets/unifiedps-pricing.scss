@@ -23,6 +23,27 @@ $border-radius: 3px;
 .pricing-stripe {
     padding: 25px 0;
 
+    @supports (display: grid) {
+        display: grid;
+        grid-template-columns: 67% 33%;
+        grid-template-areas:
+            "header header"
+            "info cta";
+
+        @media screen and (max-width: 767px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+
+            .price-title { grid-row: 1; }
+            .info { grid-row: 3; }
+            .cta { grid-row: 2; }
+        }
+
+        @media screen and (min-width: 768px) {
+            .price-title { grid-area: header; }
+        }
+    }
+
     &:after {
         display: table;
         content: '';
@@ -76,6 +97,13 @@ $border-radius: 3px;
             float: right;
             width: 33%;
             margin-left: -3%;
+        }
+
+        @supports (display: grid) {
+            .info, .cta {
+                float: none;
+                width: 100%;
+            }
         }
     }
 }
